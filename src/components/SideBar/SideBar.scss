@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.container {
+  background-color: #45496B;
+  float: left;
+  width: 200px;
+  min-height: 100vh;
+}
+
+.avatarContainer {
+  width: 66px;
+  margin: 23px auto 0;
+  padding: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 66px;
+  height: 66px;
+}
+
+.menu {
+  width: 100px;
+  margin: 0 auto;
+  height: 24px;
+}
+
+.settings {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: #4F5378;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  float: left;
+}
+
+.upload {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload + label {
+  background-color: #4F5378;
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  float: right;
+}
