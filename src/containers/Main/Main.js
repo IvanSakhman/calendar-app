@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Container from '../../components/SideBar/SideBar';
+import Container from '../../components/SideBar';
+import Calendar from '../../components/Calendar';
+import moment from 'moment';
 
 class Main extends Component {
     render() {
         return (
             <div>
                 <Container />
-                <div>Main Page</div>
+                <Calendar selected={ moment().startOf("day") } />
             </div>
         )
     }

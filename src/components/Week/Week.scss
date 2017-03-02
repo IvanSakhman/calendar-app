@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+
+.day {
+  opacity: 0.87;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.07px;
+  text-align: center;
+  padding: 5px;
+  display: block;
+  width: 16px;
+}
+
+.today {
+  border-radius: 50%;
+  color: #fff;
+  background-color: #f6cf31;
+}

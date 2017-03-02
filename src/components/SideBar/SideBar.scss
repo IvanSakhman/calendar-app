@@ -21,8 +21,8 @@
 }
 
 .menu {
-  width: 100px;
-  margin: 0 auto;
+  width: 85px;
+  margin: 5px auto;
   height: 24px;
 }
 
@@ -35,6 +35,7 @@
   width: 24px;
   height: 24px;
   float: left;
+  padding: 0;
 }
 
 .upload {
@@ -55,4 +56,52 @@
   color: rgb(255, 255, 255);
   border-radius: 50%;
   float: right;
+}
+
+.img {
+  margin: 3px 0 0 3px;
+}
+
+.nav {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.item {
+  width: 100%;
+  background-color: transparent;
+  border-left: 4px solid #45496B;
+  height: 46px;
+  box-sizing: border-box;
+}
+
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #F6CF31;
+}
+.item:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.schedule,
+.clients {
+  float: left;
+  margin: 15px 0 0 20px;
+}
+
+.text {
+  font-size: 16px;
+  float: left;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  margin: 14px 0 0 20px;
+}
+
+.number {
+  float: right;
+  margin: 15px 25px 0 0;
+  color: rgba(255, 255, 255, 0.8);
 }
