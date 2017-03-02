@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import styles from './SideBar.scss';
 import avatar from './img/avatar.png';
 import uploads from './img/uploads.svg';
@@ -23,16 +24,15 @@ class SideBar extends Component {
                     </label>
                 </div>
                 <div className={styles.nav}>
-                    <div className={styles.item}>
+                    <Link className={styles.item} to="/">
                         <img src={schedule} alt="schedule" className={styles.schedule}/>
                         <div className={styles.text}>Schedule</div>
                         <div className={styles.number}>8</div>
-                    </div>
-                    <div className={styles.item}>
+                    </Link>
+                    <Link className={styles.item} to="/client">
                         <img src={head} alt="head" className={styles.clients}/>
                         <div className={styles.text}>My clients</div>
-                        <div className={styles.number}>1</div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         )

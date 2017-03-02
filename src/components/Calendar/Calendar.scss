@@ -28,6 +28,10 @@
   padding: 5px;
 }
 
+.arrow:hover {
+  cursor: pointer;
+}
+
 .rightArrow {
   transform: rotate(180deg);
 }

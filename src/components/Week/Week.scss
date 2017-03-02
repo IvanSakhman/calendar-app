@@ -18,8 +18,22 @@
   width: 16px;
 }
 
+.day:hover {
+  cursor: pointer;
+}
+
 .today {
   border-radius: 50%;
   color: #fff;
   background-color: #f6cf31;
+}
+
+.selected {
+  width: 16px;
+  background-color: #DDDDDD;
+  border-radius: 50%;
+}
+
+.diffMonth {
+  color: #DDD;
 }
