@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.container {
+  min-height: 100vh;
+  min-width: 415px;
+  border-left: 2px solid #F0F0F0;
+  float: left;
+  margin-left: 33px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  margin: 30px 0 40px 22px;
+  float: left;
+}
+
+.form {
+  clear: both;
+  margin-left: 22px;
+}
+
+.participant,
+.desc {
+  display: block;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 12px;
+  color: rgba(0,0,0,0.50);
+  letter-spacing: 0.06px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.name {
+  display: block;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #e4e4e4;
+  margin-top: 10px;
+  padding-left: 11px;
+  height: 22px;
+  width: 187px;
+}
+
+.textarea {
+  width: 370px;
+  resize: none;
+  padding: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.20);
+  letter-spacing: 0.07px;
+  text-align: left;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  height: 37px;
+}
+
+.cancel,
+.submit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

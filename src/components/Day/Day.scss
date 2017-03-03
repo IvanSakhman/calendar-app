@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.container {
+  min-height: 100vh;
+  min-width: 415px;
+  border-left: 2px solid #F0F0F0;
+  float: left;
+  margin-left: 33px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  margin: 31px 0 28px 22px;
+  float: left;
+}
+
+.button {
+  float: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: #f6cf31;
+  color: #fff;
+  margin-top: 28px;
+  height: 26px;
+  border-radius: 100px;
+  font-weight: 100;
+  width: 81px;
+  font-size: 14px;
+}
+
+.item {
+  clear: both;
+  padding-top: 13px;
+  margin-left: 22px;
+}
+
+.desc {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.87);
+  letter-spacing: 0.07px;
+  text-align: left;
+  float: left;
+  margin: 0 0 8px;
+}
+
+.controls {
+  float: right;
+}
+
+.edit {
+  margin-right: 26px;
+}
+
+.remove {
+  margin: 2px 7px 0 0;
+}
+
+.partner {
+  clear: both;
+  background-color: #B7B7B7;
+  width: 91px;
+  text-align: center;
+  color: #fff;
+  height: 20px;
+  font-weight: 100;
+  font-size: 14px;
+  padding-top: 2px;
+  border-radius: 6px;
+}
