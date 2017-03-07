@@ -1,17 +1,15 @@
-export const GET_ALL_MEETINGS = 'GET_ALL_MEETINGS';
-export const SET_CURRENT_MEETING = 'SET_CURRENT_MEETING';
-export const EDIT_MEETING = 'EDIT_MEETING';
-export const UPDATE_MEETING = 'UPDATE_MEETING';
-export const CREATE_MEETING = 'CREATE_MEETING';
-export const DELETE_MEETING = 'DELETE_MEETING';
-export const SAVE_NEW_MEETING = 'SAVE_NEW_MEETING';
-export const TOGGLE_FORM = 'TOGGLE_FORM';
+import {
+    GET_ALL_MEETINGS,
+    SET_CURRENT_MEETING,
+    EDIT_MEETING,
+    UPDATE_MEETING,
+    CREATE_MEETING,
+    DELETE_MEETING,
+    SAVE_NEW_MEETING,
+    TOGGLE_FORM
+} from '../constants/constants';
 
-let meetings = {
-    "array": [{ name: 'name', description: 'desc'}, { name: 'name', description: 'desc'}],
-    "array1": [{ name: 'name', description: 'desc'}, { name: 'name', description: 'desc'}],
-    "array2": [{ name: 'name', description: 'desc'}, { name: 'name', description: 'desc'}]
-};
+let meetings = {};
 
 export const actions = {
     getAllMeetings: () => {
