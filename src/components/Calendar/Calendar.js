@@ -6,19 +6,18 @@ import styles from './Calendar.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actions } from '../../actions/actionsDate';
+import Day from '../Day';
+import moment from 'moment';
 
 class Calendar extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount = () => {
+    componentDidMount(){
         this.props.actions.getAllMeetings();
     };
 
     state = {
-        month: this.props.selected.clone()
+        month: moment().startOf("day").clone(),
+        selected: moment().startOf("day")
     };
 
     previous = () => {
@@ -46,7 +45,7 @@ class Calendar extends Component {
             count = 0;
 
         while ( !done ) {
-            weeks.push(<Week key={date.toString()} date={date.clone()} month={this.state.month} select={this.select} selected={this.state.selected} />);
+            weeks.push(<Week key={date.toString()} date={date.clone()} month={this.state.month} select={this.select} selected={this.state.selected} planned={this.props.meetings}/>);
             date.add(1, "w");
             done = count++ > 2 && monthIndex !== date.month();
             monthIndex = date.month();
@@ -61,23 +60,34 @@ class Calendar extends Component {
 
     render() {
         return (
-            <div className={styles.calendar}>
-                <div className={styles.nav}>
-                    <img className={styles.arrow} src={arrow} onClick={this.previous} alt="arrow"/>
-                    {this.renderMonthLabel()}
-                    <img className={`${styles.arrow} ${styles.rightArrow}`} src={arrow} onClick={this.next} alt="arrow"/>
+            <div className={styles.container}>
+                <div className={styles.calendar}>
+                    <div className={styles.nav}>
+                        <img className={styles.arrow} src={arrow} onClick={this.previous} alt="arrow"/>
+                        {this.renderMonthLabel()}
+                        <img className={`${styles.arrow} ${styles.rightArrow}`} src={arrow} onClick={this.next} alt="arrow"/>
+                    </div>
+                    <DayNames />
+                    {this.renderWeeks()}
                 </div>
-                <DayNames />
-                {this.renderWeeks()}
+                <Day selected={this.state.selected} date={this.state.selected.format('DDMMMYY')}/>
             </div>
-        )
+
+        );
     }
 }
 
-const mapDispatchToCalendarAppProps = (dispatch) => {
+const mapStateToProps = (state) => {
+    return {
+        meetings: state.meetings.all,
+        current: state.meetings.current
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
     return {
         actions: bindActionCreators(actions, dispatch)
     }
 };
 
-export default connect(mapDispatchToCalendarAppProps)(Calendar);
+export default connect(mapStateToProps, mapDispatchToProps)(Calendar);

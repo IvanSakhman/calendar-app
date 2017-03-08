@@ -6,7 +6,7 @@ function getNextId(lastId) {
 
 const INITIAL_STATE = {
     lastId: 0,
-    all: [],
+    all: {},
     currentMeeting: {id: null}
 };
 
@@ -25,7 +25,7 @@ export function meetings(state = INITIAL_STATE, action = {} ) {
                 });
                 Object.assign(meetingsList, {[day]: meetings});
             });
-            return Object.assign({}, state, {lastId: lastId}, {all: meetings});
+            return Object.assign({}, state, {lastId: lastId}, {all: meetingsList});
 
         case SET_CURRENT_MEETING:
             let newCurrent = state.current.id === action.payload.id ? INITIAL_STATE.current

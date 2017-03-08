@@ -26,7 +26,7 @@ export const persistData = store => next => action => {
         case SAVE_NEW_MEETING:
             let day = action.payload.date;
             if (!localState.meetings.all[day]) {
-                Object.assign(localSate.meetings.all, {[day]: []});
+                Object.assign(localState.meetings.all, {[day]: []});
             }
             localState.meetings.all[day] = [...localState.meetings.all[day], action.payload];
             localStorage.setItem('calendarApp', JSON.stringify(localState));
